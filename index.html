@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Mouseflow Audit — Recommendations (Formatted)</title>
+    <title>Mouseflow Audit — Recommendations</title>
     <style>
       * {
         box-sizing: border-box;
@@ -122,14 +122,30 @@
         margin: 4px 0 10px 20px;
         font-size: 14px;
       }
-      .screenshot-placeholder {
-        border-radius: 8px;
-        border: 1px dashed #cbd5f5;
-        padding: 8px 10px;
-        background: #eff6ff;
-        font-size: 12px;
-        color: #1d4ed8;
+      .image-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
         margin-top: 4px;
+      }
+      figure {
+        margin: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        background: #ffffff;
+      }
+      figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      figure figcaption {
+        font-size: 11px;
+        padding: 6px 8px;
+        color: #64748b;
+        border-top: 1px solid #e2e8f0;
+        background: #f8fafc;
       }
       .footer-note {
         margin-top: 30px;
@@ -154,7 +170,7 @@
             <div class="section-id">1.1</div>
             <div class="section-title">Mobile Above-the-Fold Optimisation</div>
           </div>
-          <div class="hours-badge">Est. effort: 2.0 hours</div>
+          <div class="hours-badge">Est. effort: 3.0 hours</div>
         </div>
         <div class="meta-row">
           <div class="meta-tag">Device: Mobile</div>
@@ -175,9 +191,19 @@
             </li>
             <li>Key conversion items are invisible on first load.</li>
           </ul>
-          <div class="screenshot-placeholder">
-            Placeholder: traffic overview &amp; scroll depth + homepage hero
-            screenshot
+          <div class="image-row">
+            <figure>
+              <img src="/image1.png" alt="Traffic overview & scroll depth" />
+              <figcaption>
+                Traffic overview &amp; scroll depth report (mobile).
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/image2.png" alt="Homepage hero above the fold" />
+              <figcaption>
+                Current mobile hero showing CTA pushed below the fold.
+              </figcaption>
+            </figure>
           </div>
         </div>
 
@@ -212,7 +238,7 @@
               Highlight Best-Selling Categories Early
             </div>
           </div>
-          <div class="hours-badge">Est. effort: 1.5 hours</div>
+          <div class="hours-badge">Est. effort: 2.5 hours</div>
         </div>
         <div class="meta-row">
           <div class="meta-tag">Device: Desktop &amp; Mobile</div>
@@ -233,8 +259,20 @@
               <code>/collections/all</code>.
             </li>
           </ul>
-          <div class="screenshot-placeholder">
-            Placeholder: homepage click heatmap + missing categories section
+          <div class="image-row">
+            <figure>
+              <img src="/image3.png" alt="Homepage click heatmap" />
+              <figcaption>
+                Homepage click heatmap showing focus on generic links.
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/image4.png" alt="Collections all engagement" />
+              <figcaption>
+                High engagement on the “All Products” collection rather than key
+                categories.
+              </figcaption>
+            </figure>
           </div>
         </div>
 
@@ -264,7 +302,7 @@
               Clarify Personalisation &amp; Ordering Steps
             </div>
           </div>
-          <div class="hours-badge">Est. effort: 2.5 hours</div>
+          <div class="hours-badge">Est. effort: 4.0 hours</div>
         </div>
         <div class="meta-row">
           <div class="meta-tag">Device: All</div>
@@ -286,9 +324,20 @@
             </li>
             <li>Upload instructions and accepted file types are unclear.</li>
           </ul>
-          <div class="screenshot-placeholder">
-            Placeholder: product page scroll heatmap + personalisation form +
-            gallery
+          <div class="image-row">
+            <figure>
+              <img src="/image5.png" alt="Product page scroll heatmap" />
+              <figcaption>
+                Scroll heatmap showing user drop-off around the personalisation
+                form.
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/image6.png" alt="Personalisation form and gallery" />
+              <figcaption>
+                Current personalisation form and gallery layout.
+              </figcaption>
+            </figure>
           </div>
         </div>
 
@@ -296,7 +345,7 @@
           <div class="card-title">Developer Actions</div>
           <ol>
             <li>
-              Add a compact 3‑step “How It Works” box above the personalisation
+              Add a compact 3-step “How It Works” box above the personalisation
               form (e.g. Choose product → Upload design → Approve proof &amp;
               ship).
             </li>
@@ -307,6 +356,10 @@
             <li>
               Move the shipping estimate or delivery timeframe directly under
               the Add to Cart button to increase trust.
+            </li>
+            <li>
+              Group related fields visually (e.g. text options vs. upload
+              options) to reduce cognitive load.
             </li>
           </ol>
         </div>
@@ -321,7 +374,7 @@
               Reduce Need to Scroll (Global Product Layout)
             </div>
           </div>
-          <div class="hours-badge">Est. effort: 1.0 hour</div>
+          <div class="hours-badge">Est. effort: 1.5 hours</div>
         </div>
         <div class="meta-row">
           <div class="meta-tag">Device: All</div>
@@ -341,8 +394,20 @@
               below the fold.
             </li>
           </ul>
-          <div class="screenshot-placeholder">
-            Placeholder: product page scroll drop-off + long scroll screenshot
+          <div class="image-row">
+            <figure>
+              <img src="/image7.png" alt="Product page long scroll" />
+              <figcaption>
+                Current product layout with key info placed far down the page.
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/image8.png" alt="Scroll depth drop-off" />
+              <figcaption>
+                Scroll depth indicating low engagement with lower content
+                blocks.
+              </figcaption>
+            </figure>
           </div>
         </div>
 
@@ -368,7 +433,7 @@
             <div class="section-id">1.5</div>
             <div class="section-title">Tidy Dead-Click Areas (UX Polish)</div>
           </div>
-          <div class="hours-badge">Est. effort: 1.5 hours</div>
+          <div class="hours-badge">Est. effort: 2.5 hours</div>
         </div>
         <div class="meta-row">
           <div class="meta-tag">Device: All</div>
@@ -387,8 +452,19 @@
               Users assume these elements are interactive, but nothing happens.
             </li>
           </ul>
-          <div class="screenshot-placeholder">
-            Placeholder: rage-click summary + dead-click heatmap overlay
+          <div class="image-row">
+            <figure>
+              <img src="/image9.png" alt="Rage-click summary" />
+              <figcaption>
+                Rage-click summary highlighting problem areas across the site.
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="/image10.png" alt="Dead-click heatmap" />
+              <figcaption>
+                Dead-click heatmap overlay on product imagery and icons.
+              </figcaption>
+            </figure>
           </div>
         </div>
 
